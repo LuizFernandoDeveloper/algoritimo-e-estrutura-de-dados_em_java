@@ -22,18 +22,16 @@ public class main {
 		stack.push(13);
 		stack.push(14);
 		
-		System.out.println("Esta vazia ? "+ stack.isEmpty());
+		System.out.println("Esta vazia ? "+ stack.empty());
 		
 		System.out.println("Topo da pilha: " + stack.top());
 		
 		System.out.println("Desempilhando elementos");
-		while(!stack.isEmpty()) {
+		while(!stack.empty()) {
 			System.out.println(stack.pop());
 		}
 		
-		System.out.println("tamhanho da pilha: " + stack.size());
-		
-		System.out.println("Esta vazia ? "+ stack.isEmpty());
+		System.out.println("Esta vazia ? "+ stack.empty());
 	}
 
 }

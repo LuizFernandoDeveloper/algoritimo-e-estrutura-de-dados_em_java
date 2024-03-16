@@ -13,7 +13,7 @@ public class DataStructure {
 		
 	}
 	
-	public boolean isEmpty() {
+	public boolean empty() {
 		return top == -1;
 	}
 	
@@ -36,7 +36,7 @@ public class DataStructure {
 	
 	public int pop() {
 		
-		if(isEmpty()) {
+		if(empty()) {
 			
 			throw new IllegalStateException("A pilha esta vazia!"); 
 			
@@ -50,7 +50,7 @@ public class DataStructure {
 	
 	public int top() {
 		
-		if(isEmpty()) {
+		if(empty()) {
 			
 			throw new IllegalStateException("A pilha esta vazia!"); 	
 			
@@ -58,11 +58,5 @@ public class DataStructure {
 		
 		return elements[top];
 	}
-	
-	public int size() {
-		
-		return elements.length;
 		
 	}
-		
-}

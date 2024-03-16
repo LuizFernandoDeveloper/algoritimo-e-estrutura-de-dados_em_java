@@ -16,24 +16,22 @@ public class main {
 		
 		DataStructure stack = new DataStructure(5);
 		
-		stack.push(10);
-		stack.push(11);
-		stack.push(12);
-		stack.push(13);
-		stack.push(14);
+		stack.stackUp(10);
+		stack.stackUp(11);
+		stack.stackUp(12);
+		stack.stackUp(13);
+		stack.stackUp(14);
 		
-		System.out.println("Esta vazia ? "+ stack.isEmpty());
+		System.out.println("Esta vazia ? "+ stack.empty());
 		
 		System.out.println("Topo da pilha: " + stack.top());
 		
 		System.out.println("Desempilhando elementos");
-		while(!stack.isEmpty()) {
-			System.out.println(stack.pop());
+		while(!stack.empty()) {
+			System.out.println(stack.unStack());
 		}
 		
-		System.out.println("tamhanho da pilha: " + stack.size());
-		
-		System.out.println("Esta vazia ? "+ stack.isEmpty());
+		System.out.println("Esta vazia ? "+ stack.empty());
 	}
 
 }

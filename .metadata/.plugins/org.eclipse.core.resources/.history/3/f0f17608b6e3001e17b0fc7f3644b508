@@ -33,7 +33,7 @@ public class main {
 		
 		System.out.println("tamhanho da pilha: " + stack.size());
 		
-		System.out.println("Esta vazia ? "+ stack.isEmpty());
+		System.out.println("Esta vazia ? "+ stack.empty());
 	}
 
 }

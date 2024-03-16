@@ -1,4 +1,3 @@
 INDEX VERSION 1.134+/home/luiz/wk/ebac/ex/algoritimo-e-estrutura-de-dados/.metadata/.plugins/org.eclipse.jdt.core
-2315566627.index
 1865797976.index
 3898341475.index
