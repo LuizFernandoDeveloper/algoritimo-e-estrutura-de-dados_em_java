@@ -1,0 +1,7 @@
+package ex.dataStructure;
+
+public class DataStructure {
+	private int maximumSize;
+	private int top;
+	private int[] elements;
+}

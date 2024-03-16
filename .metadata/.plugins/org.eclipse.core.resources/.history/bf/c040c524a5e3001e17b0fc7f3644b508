@@ -1,0 +1,47 @@
+package ex.dataStructure;
+
+public class DataStructure {
+	private int maximumSize;
+	private int top;
+	private int[] elements;
+	
+	public DataStructure(int maximumSize) {
+		
+		this.maximumSize = maximumSize;
+		this.top = -1;
+		this.elements = new int[maximumSize];
+		
+	}
+	
+	public boolean empty() {
+		return top == -1;
+	}
+	
+	public boolean full() {
+		return top == maximumSize - 1;
+	}
+	
+	public void stackUp(int element) {
+		
+		if(full()) {
+			throw new IllegalStateException("A pilha esta cheia");
+		}
+		
+		top ++;
+		elements[top] = element; 
+			
+	}
+	
+	public int unStack() {
+		
+		if(empty()) {
+			
+			throw new IllegalStateException("A pilha esta cheia"); 
+			
+		}
+		
+		int elementUnStack = elements[top];
+			
+		}
+	}
+}
