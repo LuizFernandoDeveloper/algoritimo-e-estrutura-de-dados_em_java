@@ -16,20 +16,28 @@ public class main {
 		
 		DataStructure stack = new DataStructure(5);
 		
-		stack.push(10);
-		stack.push(11);
-		stack.push(12);
-		stack.push(13);
-		stack.push(14);
+		stack.enqueue(10);
+		stack.enqueue(11);
+		stack.enqueue(12);
+		stack.enqueue(13);
+		stack.enqueue(14);
 		
 		System.out.println("Esta vazia ? "+ stack.isEmpty());
 		
-		System.out.println("Topo da pilha: " + stack.top());
+		System.out.println("Topo da pilha: " + stack.front());
+		
+		for(int element: stack.getAllRow())System.out.println(element);
 		
 		System.out.println("Desempilhando elementos");
-		while(!stack.isEmpty()) {
-			System.out.println(stack.pop());
+		int index = 0;
+		int[] listcheck = stack.getAllRow();
+		while(index !=  5) {
+			
+			stack.dequeue(listcheck[index]);
+			index ++;
 		}
+		
+		for(int element: stack.getAllRow())System.out.println(element);
 		
 		System.out.println("tamhanho da pilha: " + stack.size());
 		

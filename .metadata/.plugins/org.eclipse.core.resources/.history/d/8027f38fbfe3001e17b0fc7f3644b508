@@ -1,0 +1,5 @@
+package ex.dataStructure.exception;
+
+public class ItemNotTheFirdt extends RuntimeException{
+
+}

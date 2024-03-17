@@ -1,0 +1,22 @@
+package ex.dataStructure;
+
+/*
+ * 
+ * 
+ * 
+ * */
+
+public class DataStructure {
+	
+	private int[] elements;
+	
+	public DataStructure(int maximumSize) {
+		
+		this.maximumSize = maximumSize;
+		this.top = -1;
+		this.elements = new int[maximumSize];
+		
+	}
+		
+	
+}
