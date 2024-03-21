@@ -1,166 +1,155 @@
 package ex.dataStructure;
 
+import java.security.KeyStore.PrivateKeyEntry;
 import java.util.Iterator;
+import java.util.concurrent.ConcurrentHashMap;
+
+import javax.naming.ContextNotEmptyException;
 
 import ex.dataStructure.exception.DataStructureIsEmpty;
 import ex.dataStructure.exception.ItemNotTheFirdt;
 import ex.dataStructure.exception.NotfoudItemInArray;
 
-/*
- * 
- * Com base no que foi aprendido no módulo 1, 
- * implemente uma classe que represente uma 
- * estrutura de dados de Fila (FIFO – first in, first out). 
- * Sua implementação aceitará somente inteiros e deverá 
- * conter os seguintes métodos:
- * 
- * * enqueue() → Adiciona um inteiro à fila.
- * * dequeue() → Remove um inteiro da fila.
- * * rear() → Retorna o inteiro que está no fim da fila.
- * * front() → Retorna o inteiro que está na frente da fila.
- * * size() → Retorna o tamanho da fila.
- * * isEmpty() → Retorna true ou false dependendo da fila estar vazia ou não.
- * 
- * */
+// LinkedList
+
+//Com base no que foi aprendido no módulo 1, implemente uma classe que represente uma estrutura de dados de Lista Encadeada. Sua implementação aceitará somente inteiros e deverá conter os seguintes métodos:
+//
+//A - void push(<Node> node) → Adiciona o nó ao fim da lista.
+//B - <Node> pop() → Remove o nó no fim da lista e retorna o mesmo.
+//C - void insert(int index, <Node> node) → Adiciona um nó na posição da lista indicada via parâmetro.
+//D - void remove(int index) → Remove um nó na posição da lista indicada via parâmetro.
+//E - <Node> elementAt(int index) → Retorna o elemento que está no índice da lista indicado via parâmetro.F - int size() → Retorna o tamanho da lista.
+//G - void printList() → Retorna uma representação em texto da lista.
+
 
 public class DataStructure {
-
-	private int[] elements;
-	private int index;
-
-	public DataStructure(int maximumSize) {
-
-		this.elements = new int[maximumSize];
-		this.index = 0;
+	
+	private Node head;
+	private int size;
+	
+	public DataStructure() {
+		
+		this.head = null;
+		this.size = 0;
+		
 	}
-
-	/**
-	 * 
-	 * isEmpty() → Retorna true ou false dependendo da fila estar vazia ou não
-	 * 
-	 * @return booolean : retorna se vazia false ou se cheia true.
-	 **/
-	public boolean isEmpty() {
-
-		return elements.length == 0;
-
-	}
-
-	/**
-	 * metodo para adicionar itens na fila
-	 * 
-	 * @param element : e o item que sera adicionado na fila
-	 * 
-	 */
-	public void enqueue(int element) {
-
-		elements[index] = element;
-		index++;
-
-	}
-
-	/**
-	 * metodo para remover itens na fila
-	 * 
-	 * @param element : e o item que sera removido na fila
-	 * 
-	 */
-	public void dequeue(int element) {
-
-		if (elements[0] == element) {
-
-			boolean check = false;
-
-			for (int i = 0; i < elements.length; i++) {
-				if (elements[i] == element) {
-
-					check = true;
-
-				}
-			}
-			if (check == false) {
-
-				throw new NotfoudItemInArray("Nao encontrado na fila!");
-
-			}
-			int[] newRow = new int[elements.length - 1];
-
-			for (int i = 0; i < (elements.length - 1); i++) {
-				newRow[i] = elements[i + 1];
-			}
-
-			elements = newRow;
-
+	
+	public void push(Node node) {
+		
+		if (head == null) {
+			
+			head = node;
+			
 		} else {
-
-			throw new ItemNotTheFirdt("Esse numero nao e o primeiro");
-
+			Node current =  head;
+			while (current.next != null) {
+				
+				current = current.next;
+				
+			}
+			
+			current.next = node;
 		}
+		
+		size ++;
 	}
-
-	/**
-	 * metodo para ver o ultimo elemento da lista
-	 * 
-	 * @return elements : retorna o ultimo elemento da lista;
-	 * 
-	 */
-	public int rear() {
-
-		int value = 0;
-
-		if (!isEmpty()) {
-
-			value = elements[elements.length - 1];
-
+	
+	
+	public Node pop() {
+		
+		if(head == null) {
+			return null;
+		}
+		
+		Node current = head;
+		Node previous = null;
+		
+		while(current.next != null) {
+			previous = current;
+			current = current.next;
+		}
+		
+		if(previous != null) {
+			previous.next = null;
 		} else {
-
-			throw new DataStructureIsEmpty("Lista vazia!");
-
+			head = null;
 		}
-
-		return value;
+		size --;
+		return current;
+		
 	}
-
-	/**
-	 * front() → Retorna o inteiro que está na frente da fila.
-	 * 
-	 * @return value : retorna o primeiro valor da fila.
-	 * 
-	 */
-	public int front() {
-
-		int value = 0;
-
-		if (!isEmpty()) {
-
-			value = elements[0];
-
+	
+	
+	public void insert(int index, Node node) {
+		
+		if(index < 0 || index > size) {
+			throw new  IndexOutOfBoundsException("Index out of bounds");
+		}
+		
+		if(index == 0 ) {
+			
+			node.next = head;
+			head = node;
+		}else {
+			Node current = head;
+            for (int i = 0; i < index - 1; i++) {
+                current = current.next;
+            }
+            node.next = current.next;
+            current.next = node;
+		}
+		size ++;
+	}
+	
+	public void remove(int index) {
+		
+		if(index < 0 || index >= size) {
+			throw new IndexOutOfBoundsException("Index out of bounds");
+		}
+		if (index == 0 ) {
+			head  = head.next;
 		} else {
-
-			throw new DataStructureIsEmpty("Lista vazia!");
+			
+			Node current = head;
+			Node previous = null;
+			
+			for (int i = 0 ; i < index ; i++) {
+				previous = current;
+				current = current.next;
+			}
+			
+			previous.next = current.next;
 		}
-
-		return value;
+		
+		size --;
 	}
-
-	/**
-	 * size() → Retorna o tamanho da fila.
-	 * 
-	 * @return size : retorna o tamanho da fila!
-	 **/
+	
+	public  Node elementAt (int index) {
+		
+		if(index < 0 || index >= size) {
+			throw new IndexOutOfBoundsException("Index out of bounds");
+		}
+		
+		 Node current = head; 
+		 for (int i = 0;  i < index; i++) {
+			 current = current.next;
+		 }
+		 
+		 return current;
+	}
+	
 	public int size() {
-		return elements.length;
+		return size;
 	}
-
-	/**
-	 * retorna a fila
-	 * 
-	 * @return elements : fila elementos
-	 * 
-	 * 
-	 **/
-	public int[] getAllRow() {
-		return elements;
+	
+	public  void printList () {
+		Node  current = head;
+		while(current != null) {
+			System.out.print(current.data + " ");
+			current = current.next;
+		}
+		
+		System.out.println();
 	}
-
+	
 }

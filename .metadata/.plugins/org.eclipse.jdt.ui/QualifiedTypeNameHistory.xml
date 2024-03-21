@@ -1,2 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="ex.dataStructure.exception.NotfoudItemInArray"/>
+    <fullyQualifiedTypeName name="ex.dataStructure.exception.ItemNotTheFirdt"/>
+    <fullyQualifiedTypeName name="java.lang.invoke.StringConcatFactory"/>
+    <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+    <fullyQualifiedTypeName name="ex.dataStructure.exception.DataStructureIsEmpty"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.ConcurrentHashMap"/>
+    <fullyQualifiedTypeName name="javax.naming.ContextNotEmptyException"/>
+    <fullyQualifiedTypeName name="ex.dataStructure.Node"/>
+    <fullyQualifiedTypeName name="ex.dataStructure.DataStructure"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,6 @@
+package ex.dataStructure;
+
+public class Node {
+	int data;
+	Node next;
+}

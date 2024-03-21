@@ -9,39 +9,30 @@
 package ex;
 
 import ex.dataStructure.DataStructure;
+import ex.dataStructure.Node;
 
 public class main {
 
 	public static void main(String[] args) {
 		
-		DataStructure stack = new DataStructure(5);
-		
-		stack.enqueue(10);
-		stack.enqueue(11);
-		stack.enqueue(12);
-		stack.enqueue(13);
-		stack.enqueue(14);
-		
-		System.out.println("Esta vazia ? "+ stack.isEmpty());
-		
-		System.out.println("Topo da pilha: " + stack.front());
-		
-		for(int element: stack.getAllRow())System.out.println(element);
-		
-		System.out.println("Desempilhando elementos");
-		int index = 0;
-		int[] listcheck = stack.getAllRow();
-		while(index !=  5) {
-			
-			stack.dequeue(listcheck[index]);
-			index ++;
-		}
-		
-		for(int element: stack.getAllRow())System.out.println(element);
-		
-		System.out.println("tamhanho da pilha: " + stack.size());
-		
-		System.out.println("Esta vazia ? "+ stack.isEmpty());
+        DataStructure list = new DataStructure();
+        
+        list.push(new Node(1));
+        list.push(new Node(2));
+        list.push(new Node(3));
+
+        System.out.println("Lista original:");
+        list.printList();
+
+        list.insert(1, new Node(4));
+        System.out.println("Lista após inserção:");
+        list.printList();
+
+        list.remove(2);
+        System.out.println("Lista após remoção:");
+        list.printList();
+
+        System.out.println("Tamanho da lista: " + list.size());
 	}
 
 }
