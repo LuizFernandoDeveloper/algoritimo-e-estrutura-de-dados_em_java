@@ -1,0 +1,29 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_01_04_2024_16_55_[Changes]1" date="1712001350466" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_01_04_2024_16_55_[Changes]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 01/04/2024 16:55 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="../.metadata/.plugins/org.eclipse.jdt.core/1865797976.index" />
+    <option name="AFTER_PATH" value="../.metadata/.plugins/org.eclipse.jdt.core/1865797976.index" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_01_04_2024_16_55_[Changes]1/1865797976.index" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="../.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" />
+    <option name="AFTER_PATH" value="../.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_01_04_2024_16_55_[Changes]1/org.eclipse.core.resources" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="../.metadata/.plugins/org.eclipse.core.resources/.projects/ex/.markers" />
+    <option name="AFTER_PATH" value="../.metadata/.plugins/org.eclipse.core.resources/.projects/ex/.markers" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_01_04_2024_16_55_[Changes]1/.markers" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="../.metadata/.plugins/org.eclipse.jdt.core/2315566627.index" />
+    <option name="AFTER_PATH" value="../.metadata/.plugins/org.eclipse.jdt.core/2315566627.index" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_01_04_2024_16_55_[Changes]1/2315566627.index" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="../.metadata/.plugins/org.eclipse.core.resources/.projects/ex/org.eclipse.jdt.core/state.dat" />
+    <option name="AFTER_PATH" value="../.metadata/.plugins/org.eclipse.core.resources/.projects/ex/org.eclipse.jdt.core/state.dat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_01_04_2024_16_55_[Changes]1/state.dat" />
+  </binary>
+</changelist>

@@ -44,4 +44,6 @@ public class main {
 		System.out.println("Esta vazia ? "+ stack.isEmpty());
 	}
 
+
+
 }
